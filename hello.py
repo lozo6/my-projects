@@ -15,18 +15,20 @@ Guess, Computer Guess, Rock, Paper, Scissors (RPS), Hangman
 Quit
 """)
 
-x = input('Which game would you like to play? ').lower()
+x = ''
 while x != 'quit':
+    x = input('Which game would you like to play? ').lower().strip()
     if x == 'guess':
         guess(20)
-        break
+        pass
     elif x == 'computer guess':
         comp_guess(100)
-        break
+        pass
     elif x == 'rps':
         print(rps())
-        break
+        pass
     elif x == 'hangman':
         print(hangman())
-        break
+        pass
+    x = input('Do you want to continue or quit? ').lower().strip()
 print(f'thank you for playing, {player}')
